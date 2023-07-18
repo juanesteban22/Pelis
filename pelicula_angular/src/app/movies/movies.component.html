@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>Buscar Película</h1>
+    <div class="input-container">
+      <input type="text" [(ngModel)]="movieTitle" placeholder="Ingrese el nombre de la película" class="input-field">
+      <button (click)="buscarPelicula()" class="search-button">Buscar</button>
+    </div>
+  
+    <!-- Aquí puedes mostrar los resultados -->
+    <div *ngFor="let datas of data" class="results-container">
+      
+      <h2>Título: {{ datas.Title }}</h2>
+      <ul>
+        <li>Año: {{ datas.Year }}</li>
+        <li>Director: {{ datas.Director }}</li>
+        <li>Actores: {{ datas.Actors }}</li>
+        <li>Género: {{ datas.Genre }}</li>
+        <img [src]="datas.Poster">
+      </ul>
+    </div>
+  </div>
+  
